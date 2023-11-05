@@ -20,7 +20,7 @@
 		color: rgb(var(--main));
 		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 		margin: 0;
-		padding: 0 1em 4em 1em;
+		padding: 0 1em 5em 1em;
 	}
 	ul {
 		list-style: none;
@@ -41,13 +41,16 @@
 	.headline h1 {
 		font-size: 1.25em;
 		line-height: 1;
-		margin: 1.75em 0;
+		margin: 1.25em 0;
 	}
 	.headline h1 a {
 		text-decoration: none;
 	}
 	.game {
-		margin: 1.25em 0;
+		margin: 1em 0 0 0;
+	}
+	.game + .game {
+		margin-top: 2em;
 	}
 	.game .header {
 		order: 1;
@@ -89,7 +92,7 @@
 		order: 1;
 	}
 	.inner {
-		font-size: 0.875em;
+		font-size: .875em;
 	}
 	.inner > p {
 		margin-top: 0;
@@ -102,6 +105,8 @@
 	.media {
 		box-shadow: 2px 2px 4px rgba(var(--main), .6);
 		display: block;
+		height: auto;
+		width: 100%;
 	}
 	.media:hover {
 		text-decoration: none;
@@ -114,6 +119,7 @@
 	}
 	.ctas {
 		margin-left: 2ch;
+		margin-bottom: 0;
 		padding-left: 0;
 	}
 	.ctas li {
@@ -127,7 +133,8 @@
 	}
 	.work,
 	.footer {
-		margin: 1.25em 0;
+		border-top: rgb(var(--main)) 1px dashed;
+		margin: 2em 0 1.25em;
 	}
 	.works li {
 		display: block;
@@ -148,6 +155,8 @@
 	}
 	.footer {
 		font-size: .85em;
+		margin-bottom: 0;
+		padding-top: .85em;
 	}
 	.footer ul {
 		list-style: none;
@@ -164,35 +173,35 @@
 	}
     img,
     video {
-        filter: brightness(0.85);
+        filter: brightness(.85);
     }
     .media {
 		box-shadow: none;
     }
 }
 
-@media only screen and (min-width: 414px) {
+@media only screen and (min-width: calc(320px + 1em)) {
 
-	.headline h1 {
-		margin: 1.75em 0;
+	.media {
+		margin: 0 auto;
+		width: auto;
 	}
-	.game,
-	.work {
-		margin: 2.5em 0;
-	}
-	.footer {
-		margin: calc(2.5em + 1.75em) 0 2.5em;
+	.game .header {
+		text-align: center;
 	}
 }
 
-@media only screen and (min-width: 667px) {
+@media only screen and (min-width: 640px) {
 
 	.headline,
 	.footer {
 		text-align: center;
 	}
+	.game .header {
+		text-align: left;
+	}
 	.game .header h1 {
-		margin-bottom: 0.875em;	
+		margin-bottom: .875em;	
 	}
 	.game {
 		flex-direction: row;
@@ -219,23 +228,24 @@
 	}
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-height: 720px) and (min-width: 1180px) {
 
 	body {
     	margin: 0 auto;
 		max-width: calc(72ch + 320px);
 	}
 	.headline h1 {
-		font-size: 2.25em;
+		font-size: 1.75em;
 		margin: 3em 0;
 	}
 	.game,
 	.work {
-		margin: 4em 0;
+		border-top: none;
+		margin: 5em 0;
 	}
 	.game .header h1,
 	.work .header h1 {
-		font-size: 1.75em;
+		font-size: 1.5em;
 	}
 	.game .release {
 		font-size: 1em;
@@ -247,16 +257,25 @@
 	.footer {
 		font-size: 1em;
 	}
+	.footer {
+		border: none;
+		padding-top: 0;
+	}
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-height: 900px) and (min-width: 1600px) {
 
 	body {
 		max-width: calc(72ch + (1280px/2));
 		padding: 0;
 	}
 	.headline h1 {
+		font-size: 2.25em;
 		margin: 4em 0;
+	}
+	.game .header h1,
+	.work .header h1 {
+		font-size: 1.75em;
 	}
 	.right {
 		max-width: 100%;
@@ -266,7 +285,7 @@
 		max-width: none;
 	}
 	.footer {
-		margin: calc(4em + 1.75em) 0 4em;
+		margin: 6.75em 0;
 	}
 }
 
