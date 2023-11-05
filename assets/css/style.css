@@ -4,17 +4,17 @@
 		box-sizing: border-box;
 	}
 	:root {
-	    --contrast: 255, 255, 255;
-	    --main: 92, 99, 109;
+		--contrast: 255, 255, 255;
+		--main: 92, 99, 109;
 	}
 	::selection {
-        background: rgb(var(--main));
-        color: rgb(var(--contrast));
-    }
-    ::-moz-selection {
-        background: rgb(var(--main));
-        color: rgb(var(--contrast));
-    }
+		background: rgb(var(--main));
+		color: rgb(var(--contrast));
+	}
+	::-moz-selection {
+		background: rgb(var(--main));
+		color: rgb(var(--contrast));
+	}
 	body {
 		background: rgb(var(--contrast));
 		color: rgb(var(--main));
@@ -84,8 +84,8 @@
 		flex-direction: column;
 	}
 	.left {
-	    margin-top: 1em;
-	    order: 2;
+		margin-top: 1em;
+		order: 2;
 	}
 	.right {
 		justify-content: flex-end;
@@ -168,16 +168,16 @@
 @media only screen and (prefers-color-scheme: dark) {
 
 	:root {
-	    --contrast: 24, 26, 27;
-	    --main: 169, 161, 150;
+		--contrast: 24, 26, 27;
+		--main: 169, 161, 150;
 	}
-    img,
-    video {
-        filter: brightness(.85);
-    }
-    .media {
+	img,
+	video {
+		filter: brightness(.85);
+	}
+	.media {
 		box-shadow: none;
-    }
+	}
 }
 
 @media only screen and (min-width: calc(320px + 1em)) {
@@ -215,7 +215,7 @@
 	.left {
 		order: 2;
 		margin-top: 0;
-	    width: 100%;
+		width: 100%;
 	}
 	.right {
 		order: 3;
@@ -231,7 +231,7 @@
 @media only screen and (min-height: 720px) and (min-width: 1180px) {
 
 	body {
-    	margin: 0 auto;
+		margin: 0 auto;
 		max-width: calc(72ch + 320px);
 	}
 	.headline h1 {
