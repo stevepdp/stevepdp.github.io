@@ -137,8 +137,11 @@
 		margin: 2em 0 1.25em;
 	}
 	.works li {
+		background-repeat: no-repeat;
+		background-position: left center;
 		display: block;
 		line-height: 1.6;
+		padding-left: calc(75px + 1em);
 	}
 	.works li ~ li {
 		margin-top: 2em;
